@@ -2,7 +2,7 @@
 # VMSS Dashboard - program to show the properties of an Azure VM Scale Set app
 """
 Copyright (c) 2016, Guy Bowerman
-Description: Simple Azure Resource Manager Python library
+Description: Graphical dashboard to show and set Azure VM Scale Set properties
 License: MIT (see LICENSE.txt file for details)
 """
 import pygame
