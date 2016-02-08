@@ -5,7 +5,7 @@ Dashboard to show Azure VM Scale Set status and properties
 1. Install Python 3.x.
 2. Install the azurerm REST wrappers for Microsoft Azure: pip install azurerm
 3. Install pygame: pip install pygame
-4. Clone this app locally.
+4. Clone this repo locally.
 5. Register an Azure application, create a service principal and get your tenant id. See "Using vmssdashboard".
 6. Put in values for your application, along with your resource group name, and VM Scale Set name in vmssconfig.json.
 7. Run: python vmssdashboard.py
