@@ -1,6 +1,9 @@
 # VMSS Dashboard
 Dashboard to show Azure VM Scale Set status and properties
 
+![Image of VMSS Dashboard](https://raw.githubusercontent.com/gbowerman/vmssdashboard/master/docs/vmssdash-img.png)
+
+
 ## Installation
 1. Install Python 3.x.
 2. Install the azurerm REST wrappers for Microsoft Azure: pip install azurerm
