@@ -1,4 +1,4 @@
-\# VMSS Dashboard
+# VMSS Dashboard
 Dashboard to show Azure VM Scale Set status and properties
 
 ![Image of VMSS Dashboard](https://raw.githubusercontent.com/gbowerman/vmssdashboard/master/docs/vmssdash-img.png)
@@ -13,9 +13,9 @@ Dashboard to show Azure VM Scale Set status and properties
   6. Put in values for your application, along with your resource group name, and VM Scale Set name in vmssconfig.json.
   7. Run: python vmssdashboard.py
 
-## Using vmssdashboard To use this app (and in general to access Azure
+## Using vmssdashboard 
 
-Resource Manager from a program without going through 2 factor
+To use this app (and in general to access Azure Resource Manager from a program without going through 2 factor
 authentication) you need to register your application with Azure and
 create a "Service Principal" (an application equivalent of a
 user). Once you've done this you'll have 3 pieces of information: A
