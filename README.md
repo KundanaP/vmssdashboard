@@ -22,7 +22,8 @@ user). Once you've done this you'll have 3 pieces of information: A
 tenant ID, an application ID, and an application secret. You will use
 these to populate the vmssconfig.json file. For more information on
 how to get this information go here: [Authenticating a service
-principal with Azure Resource
-Manager](https://azure.microsoft.com/en-us/documentation/articles/resource-group-authenticate-service-principal/). See
-also: [Azure Resource Manager REST calls from
-Python](https://msftstack.wordpress.com/2016/01/05/azure-resource-manager-authentication-with-python).
+principal with Azure Resource Manager][service-principle]. See also:
+[Azure Resource Manager REST calls from Python][python-auth].
+
+[service-principle]: https://azure.microsoft.com/en-us/documentation/articles/resource-group-authenticate-service-principal/
+[python-auth]: https://msftstack.wordpress.com/2016/01/05/azure-resource-manager-authentication-with-python
