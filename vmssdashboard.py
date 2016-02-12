@@ -17,15 +17,15 @@ import sys
 try:
    with open('vmssConfig.json') as configFile:    
       configData = json.load(configFile)
-   tenant_id = configData['tenantId']
-   app_id = configData['appId']
-   app_secret = configData['appSecret']
-   subscription_id = configData['subscriptionId']
 except FileNotFoundError:
    print("Error: Expecting vmssConfig.json in current folder")
    sys.exit()
    
-# this is the resource group, VM Scale Set, and IP address to monitor 
+tenant_id = configData['tenantId']
+app_id = configData['appId']
+app_secret = configData['appSecret']
+subscription_id = configData['subscriptionId']
+# this is the resource group, VM Scale Set to monitor..
 rgname = configData['resourceGroup']
 vmssname = configData['vmssName']
 configFile.close()
@@ -161,12 +161,16 @@ def draw_vmss():
 
 # show all the VMs in the VMSS with their provisioning state
 def draw_vmssvms():
-   incr = 0
+   xinc = 0
+   yinc = 0
    for vm in vmssVmProperties:
-      draw_icon(vm_image, [vm_start_coords[0] + incr, vm_start_coords[1]])
-      draw_text(vm[1], [vm_start_coords[0] - 30 + incr, vm_start_coords[1] + 20], 16)
-      draw_text(vm[2], [vm_start_coords[0] - 30 + incr, vm_start_coords[1] + 35], 16)
-      incr += 100
+      draw_icon(vm_image, [vm_start_coords[0] + xinc, vm_start_coords[1] + yinc])
+      draw_text(vm[1], [vm_start_coords[0] - 30 + xinc, vm_start_coords[1] + 20 + yinc], 16)
+      draw_text(vm[2], [vm_start_coords[0] - 30 + xinc, vm_start_coords[1] + 35 + yinc], 16)
+      xinc += 100
+      if xinc == 1200:
+         xinc = 0
+         yinc += 55
 
 # change the VM scale set capacity by scaleNum (can be positive or negative for scale-out/in)   
 def scale_event(scaleNum, access_token):
